@@ -42,8 +42,8 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - /Users/cisco/Desktop/workspace/docker/docker_data/php_dev/mysql/data:/var/lib/mysql
-      - /Users/cisco/Desktop/workspace/docker/docker_data/php_dev/mysql/log:/var/log/mysql
+      - "/Users/cisco/Desktop/workspace/docker/docker_data/php_dev/mysql/data:/var/lib/mysql"
+      - "/Users/cisco/Desktop/workspace/docker/docker_data/php_dev/mysql/log:/var/log/mysql"
     environment:
       - MYSQL_ROOT_PASSWORD=123456
   redis:
@@ -57,5 +57,5 @@ services:
       - "6379:6379"
     command: redis-server /usr/local/redis/conf/redis.conf # 启动redis服务并指定配置文件
     volumes:
-      - /Users/cisco/Desktop/workspace/docker/docker_data/php_dev/redis/data:/data # redis数据目录
-      - /Users/cisco/Desktop/workspace/docker/docker_data/php_dev/redis/conf/redis.conf:/usr/local/redis/conf/redis.conf #redis配置文件
+      - "/Users/cisco/Desktop/workspace/docker/docker_data/php_dev/redis/data:/data" # redis数据目录
+      - "/Users/cisco/Desktop/workspace/docker/docker_data/php_dev/redis/conf/redis.conf:/usr/local/redis/conf/redis.conf" #redis配置文件
