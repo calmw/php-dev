@@ -1,4 +1,4 @@
-version: '3'
+version: '3.9'
 
 networks:
   php-dev:
@@ -31,6 +31,7 @@ services:
       - "php"
     volumes:
       - "/Users/cisco/Desktop/workspace/PHP/www:/var/www"
+      - "/Users/cisco/Desktop/workspace/docker/docker_data/php_dev/nginx/conf.d/:/etc/nginx/conf.d/"
       - "/Users/cisco/Desktop/workspace/docker/docker_data/php_dev/nginx/logs:/var/log/nginx"
   mysql:
     image: mysql:9.1
